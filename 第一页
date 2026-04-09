@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AeroAgra | Digital Agronomist Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#141a1f",
+                    "surface-dim": "#0a0f13",
+                    "secondary": "#2ff801",
+                    "primary": "#8ff5ff",
+                    "background": "#0a0f13",
+                    "on-surface": "#f3f7fd",
+                    "on-surface-variant": "#a7abb1",
+                    "error": "#ff716c",
+                    "tertiary": "#cafd00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(31, 39, 44, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(143, 245, 255, 0.05) 1px, transparent 1px);
+            background-size: 12px 12px;
+            pointer-events: none;
+        }
+        .neon-border-blue {
+            border: 1px solid rgba(143, 245, 255, 0.2);
+            box-shadow: 0 0 10px rgba(143, 245, 255, 0.1);
+        }
+        .neon-border-green {
+            border: 1px solid rgba(47, 248, 1, 0.2);
+            box-shadow: 0 0 10px rgba(47, 248, 1, 0.1);
+        }
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(143, 245, 255, 0.5), transparent);
+            top: 0;
+            animation: scan 3s linear infinite;
+            z-index: 10;
+        }
+        @keyframes scan {
+            0% { top: 0; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-primary selection:text-black">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0a0f13]/60 backdrop-blur-xl bg-gradient-to-b from-[#0a0f13] to-transparent shadow-[0_0_20px_rgba(143,245,255,0.05)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-primary/20 overflow-hidden active:scale-95 transition-transform">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh4rqRCGKa3pR2bKSa_X3XykSibfiSL4JPxPC9rWR8CSs1dTUafS3l3tNIzz7Ojsy1kDcNCqlU5TZylcwKhjBE07ajudOJ3QVT_REif8MHLUNVBU-ldJREy9viwYQgNR0PVtjPzWMe89PMr8ckdRJ_oSMNEWM3Ub28XDSOeAOSPVUSchIZ6bFKGXvl5tgbeRGkPVYwwgZCTTQ2EDh3P8hqzo2eZHgndS_u9plYbxU0bYa-F_CIFA5y1xEkm4pm8ME3ChxkUJ2EoZBi"/>
+</div>
+<div class="flex flex-col">
+<h1 class="text-xl font-bold tracking-widest text-primary uppercase font-headline leading-none">AeroAgra</h1>
+<span class="font-headline text-[9px] text-on-surface-variant tracking-tighter uppercase mt-0.5">Mission Control</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:text-white transition-colors active:scale-90">
+<span class="material-symbols-outlined">sync</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-28 px-4 space-y-6 max-w-lg mx-auto">
+<!-- Quick Stats Bento Row -->
+<section class="grid grid-cols-3 gap-3">
+<div class="glass-card neon-border-blue p-4 flex flex-col items-center justify-center text-center rounded-xl">
+<span class="text-primary/70 text-[10px] font-headline uppercase tracking-widest mb-1">Moisture</span>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-headline font-bold text-primary">42</span>
+<span class="text-[10px] text-on-surface-variant font-bold">%</span>
+</div>
+</div>
+<div class="glass-card neon-border-green p-4 flex flex-col items-center justify-center text-center rounded-xl">
+<span class=
