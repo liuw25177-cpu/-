@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#4d5a2b",
+                    "outline": "#6d7b48",
+                    "primary": "#94fb69",
+                    "on-tertiary-fixed": "#474c00",
+                    "primary-fixed": "#94fb69",
+                    "primary-dim": "#86ec5d",
+                    "secondary": "#ccf070",
+                    "surface-bright": "#233100",
+                    "on-secondary-fixed": "#344500",
+                    "surface-container-highest": "#1e2a00",
+                    "error-dim": "#d53d18",
+                    "on-primary-fixed": "#154a00",
+                    "inverse-surface": "#f3ffcd",
+                    "on-primary-container": "#082900",
+                    "tertiary": "#faffaf",
+                    "on-secondary-container": "#eeffbf",
+                    "on-primary-fixed-variant": "#216a00",
+                    "tertiary-dim": "#e1eb5e",
+                    "surface": "#0a1000",
+                    "surface-dim": "#0a1000",
+                    "on-primary": "#1d5e00",
+                    "error-container": "#b92902",
+                    "surface-container-high": "#192300",
+                    "primary-fixed-dim": "#86ec5d",
+                    "error": "#ff7351",
+                    "on-error": "#450900",
+                    "surface-tint": "#94fb69",
+                    "primary-container": "#53b62b",
+                    "surface-variant": "#1e2a00",
+                    "on-surface": "#e7f8ba",
+                    "secondary-container": "#4e6700",
+                    "on-surface-variant": "#a2b179",
+                    "on-tertiary-container": "#555b00",
+                    "tertiary-container": "#e9f466",
+                    "on-tertiary-fixed-variant": "#636900",
+                    "on-error-container": "#ffd2c8",
+                    "secondary-fixed-dim": "#bee263",
+                    "tertiary-fixed": "#effa6b",
+                    "on-tertiary": "#5d6400",
+                    "background": "#0a1000",
+                    "on-secondary": "#435900",
+                    "inverse-primary": "#236e00",
+                    "surface-container-lowest": "#000000",
+                    "surface-container": "#141d00",
+                    "on-background": "#e7f8ba",
+                    "tertiary-fixed-dim": "#e1eb5e",
+                    "secondary-dim": "#bee263",
+                    "surface-container-low": "#0e1600",
+                    "outline-variant": "#404d1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 42, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .metric-val { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-[#6e7d4a]/60 backdrop-blur-xl dark:bg-[#0a0f13]/60 flex justify-between items-center px-6 h-16 w-full shadow-[0_0_20px_rgba(91,255,0,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#5bff00]">menu</span>
+<h1 class="text-[#5bff00] font-['Space_Grotesk'] tracking-tight text-xl font-bold uppercase tracking-widest">Analysis Report</h1>
+</div>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#5bff00]">export_notes</span>
+</button>
+</nav>
+<!-- Content Canvas -->
+<main class="mt-20
