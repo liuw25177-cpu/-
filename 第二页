@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AeroAgra - Precision Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#474c00",
+            "surface": "#000000",
+            "surface-variant": "#111111",
+            "on-primary-fixed": "#154a00",
+            "secondary": "#ccf070",
+            "on-tertiary-container": "#555b00",
+            "on-secondary-fixed": "#344500",
+            "inverse-surface": "#f3ffcd",
+            "error": "#ff7351",
+            "on-surface-variant": "#a2b179",
+            "inverse-primary": "#236e00",
+            "tertiary": "#faffaf",
+            "on-tertiary": "#5d6400",
+            "on-error": "#450900",
+            "surface-container-lowest": "#000000",
+            "inverse-on-surface": "#4d5a2b",
+            "on-secondary": "#435900",
+            "surface-container-low": "#080808",
+            "secondary-container": "#1e2a00",
+            "primary-fixed-dim": "#86ec5d",
+            "surface-dim": "#050505",
+            "tertiary-fixed": "#effa6b",
+            "secondary-fixed": "#ccf070",
+            "on-secondary-fixed-variant": "#4b6400",
+            "surface-bright": "#1a1a1a",
+            "on-primary-fixed-variant": "#216a00",
+            "outline-variant": "#2a2a2a",
+            "tertiary-fixed-dim": "#e1eb5e",
+            "error-dim": "#d53d18",
+            "on-background": "#ffffff",
+            "error-container": "#b92902",
+            "on-tertiary-fixed-variant": "#636900",
+            "on-error-container": "#ffd2c8",
+            "outline": "#444444",
+            "secondary-dim": "#bee263",
+            "primary-fixed": "#94fb69",
+            "primary-container": "#1a3a0e",
+            "primary": "#94fb69",
+            "on-surface": "#f0f0f0",
+            "primary-dim": "#86ec5d",
+            "background": "#000000",
+            "surface-container-high": "#121212",
+            "tertiary-container": "#e9f466",
+            "surface-container-highest": "#181818",
+            "tertiary-dim": "#e1eb5e",
+            "surface-container": "#0d0d0d",
+            "secondary-fixed-dim": "#bee263",
+            "on-secondary-container": "#eeffbf",
+            "on-primary-container": "#94fb69",
+            "surface-tint": "#94fb69",
+            "on-primary": "#000000"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass {
+      background: rgba(15, 15, 15, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .thermal-gradient {
+      background: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+    }
+    .map-overlay {
+      background-image: radial-gradient(circle at 48% 58%, rgba(255, 0, 0, 0.25) 0%, rgba(0, 255, 0, 0.05) 30%, transparent 60%);
+    }
+    .neon-border {
+      box-shadow: 0 0 10px rgba(148, 251, 105, 0.2);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-label selection:bg-primary selection:text-on-primary overflow-hidden h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:bg-white/5 transition-colors p-2 rounded-full">grid_view</button>
+<h1 class="text-xl font-bold tracking-widest text-primary uppercase font-headline">NW-7 Wheat Field</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 font-headline">
+<a class="text-gray-500 font-medium hover:text-white transition-colors px-2 py-1" href="#">Mission</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-medium px-2 py-1" href="#">Analysis</a>
+<a class="text-gray-500 font-medium hover:text-white transition-colors px-2 py-1" href="#">Fleet</a>
+</nav>
+<button class="material-symbols-outlined
